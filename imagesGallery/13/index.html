@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Galeria zoom</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+   <!-- Img on which you want to trigger carousel -->
+   <div class="carousel-row">
+    <div class="carousel-row--img">
+      <img src="https://img.freepik.com/fotos-gratis/show-de-fontes-de-arco-iris-na-expo-bridge-na-coreia-do-sul_335224-485.jpg?t=st=1721237177~exp=1721240777~hmac=1dbf0f9684a91b28de3d68fa52c81a92ae4cd4fc0e564562163d064d63c0ec37&w=740" class="hover-shadow" />
+    </div>
+    <div class="carousel-row--img">
+      <img src="https://img.freepik.com/fotos-gratis/foto-hipnotizante-de-uma-bela-paisagem-montanhosa-nos-acores-portugal_181624-37662.jpg?t=st=1721158232~exp=1721161832~hmac=29b7618c84bb6a795e252ae1b3c34c53a8eaba41a052f45db61fe6b856c617a1&w=740" class="hover-shadow" />
+    </div>
+    <div class="carousel-row--img">
+      <img src="https://img.freepik.com/fotos-gratis/palacio-gyeongbokgung-a-noite-em-seul-coreia_335224-481.jpg?t=st=1721238442~exp=1721242042~hmac=6f69c7b574e8688250e81b0d469cc90cad42de540b02f95bdc0af111ef4caa95&w=740" class="hover-shadow" />
+    </div>
+    <div class="carousel-row--img">
+      <img src="https://img.freepik.com/fotos-gratis/templo-bongeunsa-em-seul-coreia_335224-545.jpg?t=st=1721238479~exp=1721242079~hmac=b454e3abe5688d216e531ee3b4b251dc400111f099a39a0d21416a11a571a69d&w=740" class="hover-shadow" />
+    </div>
+    <div class="carousel-row--img">
+      <img src="https://img.freepik.com/fotos-gratis/viajar-arquitectura-tradicional-aegean-mediterranean_1203-4774.jpg?t=st=1721238628~exp=1721242228~hmac=3adb8403cd8478bdefd320e3c29eb9bbdfdbcf24acb3f285316007017e9804ec&w=740" class="hover-shadow" />
+    </div>
+    <div class="carousel-row--img">
+      <img src="https://img.freepik.com/fotos-gratis/ruinas-da-antiga-cidade-stageira-em-halkidiki-grecia_1268-16144.jpg?t=st=1721243443~exp=1721247043~hmac=9ce8d4708a1635c1faa61902986ece97b0c1dc532368eaec067c51c7789f4847&w=740" class="hover-shadow" />
+    </div>
+  </div>
+
+  <!-- The Modal/Lightbox -->
+  <div id="myModal" class="modal no-select">
+    <span class="close cursor">&times;</span>
+    <!-- Next/previous controls -->
+    <a class="prev no-select">&#10094;</a>
+    <a class="next no-select">&#10095;</a>
+    <div class="modal-content">
+      <div class="my-slides">
+        <div class="my-slides--number"></div>
+        <img src="https://img.freepik.com/fotos-gratis/show-de-fontes-de-arco-iris-na-expo-bridge-na-coreia-do-sul_335224-485.jpg?t=st=1721237177~exp=1721240777~hmac=1dbf0f9684a91b28de3d68fa52c81a92ae4cd4fc0e564562163d064d63c0ec37&w=740" />
+      </div>
+
+      <div class="my-slides">
+        <div class="my-slides--number"></div>
+        <img src="https://img.freepik.com/fotos-gratis/foto-hipnotizante-de-uma-bela-paisagem-montanhosa-nos-acores-portugal_181624-37662.jpg?t=st=1721158232~exp=1721161832~hmac=29b7618c84bb6a795e252ae1b3c34c53a8eaba41a052f45db61fe6b856c617a1&w=740" />
+      </div>
+
+      <div class="my-slides">
+        <div class="my-slides--number"></div>
+        <img src="https://img.freepik.com/fotos-gratis/palacio-gyeongbokgung-a-noite-em-seul-coreia_335224-481.jpg?t=st=1721238442~exp=1721242042~hmac=6f69c7b574e8688250e81b0d469cc90cad42de540b02f95bdc0af111ef4caa95&w=740" />
+      </div>
+
+      <div class="my-slides">
+        <div class="my-slides--number"></div>
+        <img src="https://img.freepik.com/fotos-gratis/viajar-arquitectura-tradicional-aegean-mediterranean_1203-4774.jpg?t=st=1721238628~exp=1721242228~hmac=3adb8403cd8478bdefd320e3c29eb9bbdfdbcf24acb3f285316007017e9804ec&w=740" />
+      </div>
+
+      <div class="my-slides">
+        <div class="my-slides--number"></div>
+        <img src="https://img.freepik.com/fotos-gratis/torre-branca-de-thessaloniki-com-nuvens-na-grecia_1268-16086.jpg?t=st=1721243360~exp=1721246960~hmac=d71908771098437a822145736344d5cc4d407932e8249d0e42fbdef1f90ae4b1&w=740" />
+      </div>
+
+      <div class="my-slides">
+        <div class="my-slides--number"></div>
+        <img src="https://img.freepik.com/fotos-gratis/ruinas-da-antiga-cidade-stageira-em-halkidiki-grecia_1268-16144.jpg?t=st=1721243443~exp=1721247043~hmac=9ce8d4708a1635c1faa61902986ece97b0c1dc532368eaec067c51c7789f4847&w=740" />
+      </div>
+
+      <!-- Caption text -->
+      <div class="caption-container">
+        <p id="caption"></p>
+      </div>
+
+      <!-- Thumbnail image controls -->
+      <div class="column-box">
+        <div class="column">
+          <img class="demo" src="https://img.freepik.com/fotos-gratis/show-de-fontes-de-arco-iris-na-expo-bridge-na-coreia-do-sul_335224-485.jpg?t=st=1721237177~exp=1721240777~hmac=1dbf0f9684a91b28de3d68fa52c81a92ae4cd4fc0e564562163d064d63c0ec37&w=740" alt="Nature" />
+        </div>
+
+        <div class="column">
+          <img
+            class="demo"
+            src="https://img.freepik.com/fotos-gratis/foto-hipnotizante-de-uma-bela-paisagem-montanhosa-nos-acores-portugal_181624-37662.jpg?t=st=1721158232~exp=1721161832~hmac=29b7618c84bb6a795e252ae1b3c34c53a8eaba41a052f45db61fe6b856c617a1&w=740"
+            alt="Snow"
+          />
+        </div>
+
+        <div class="column">
+          <img class="demo" src="https://img.freepik.com/fotos-gratis/palacio-gyeongbokgung-a-noite-em-seul-coreia_335224-481.jpg?t=st=1721238442~exp=1721242042~hmac=6f69c7b574e8688250e81b0d469cc90cad42de540b02f95bdc0af111ef4caa95&w=740" alt="Mountains" />
+        </div>
+
+        <div class="column">
+          <img class="demo"
+            src="https://img.freepik.com/fotos-gratis/viajar-arquitectura-tradicional-aegean-mediterranean_1203-4774.jpg?t=st=1721238628~exp=1721242228~hmac=3adb8403cd8478bdefd320e3c29eb9bbdfdbcf24acb3f285316007017e9804ec&w=740"
+            alt="Lights"
+          />
+        </div>
+
+        <div class="column">
+          <img class="demo" src="https://img.freepik.com/fotos-gratis/torre-branca-de-thessaloniki-com-nuvens-na-grecia_1268-16086.jpg?t=st=1721243360~exp=1721246960~hmac=d71908771098437a822145736344d5cc4d407932e8249d0e42fbdef1f90ae4b1&w=740" alt="Mountains" />
+        </div>
+
+        <div class="column">
+          <img class="demo"
+            src="https://img.freepik.com/fotos-gratis/ruinas-da-antiga-cidade-stageira-em-halkidiki-grecia_1268-16144.jpg?t=st=1721243443~exp=1721247043~hmac=9ce8d4708a1635c1faa61902986ece97b0c1dc532368eaec067c51c7789f4847&w=740"
+            alt="Lights"/>
+        </div>
+      </div>
+    </div>
+  </div>
+
+    <script src="script.js"></script>
+    
+
+</body>
+</html>
