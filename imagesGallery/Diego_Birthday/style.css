@@ -108,10 +108,12 @@ video{
   
   @media (max-width:720px){
   .footer{
-  text-align:left;
+  text-align:center;
   padding:5%;
   }
-
+  .footer .row{
+  padding:0;
+  }
   .footer .row a i{
   margin:0% 3%;
   }
